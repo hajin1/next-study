@@ -6,11 +6,17 @@ type Props = {
     }
 }
 
+export function generateMetadata({params}: Props){
+    return {
+        title: `제품의 이름: ${params.slug}`
+    }
+}
+
 export default function PantsPage({params}: Props) {
     if(params.slug === 'nothing') {
         notFound()
     }
-    return <h1>{params.slug} 바지 제품 설명 페이지</h1>
+    return <h1>{params.slug} 제품 설명 페이지</h1>
 }
 
 // dynamic routing 환경에서 미리 만들어두고 싶은 페이지의 경로를 설정할 수 있다. 

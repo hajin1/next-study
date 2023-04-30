@@ -6,6 +6,7 @@ type Props = {
     slug: string;
   };
 };
+export const revalidate= 4;
 
 export function generateMetadata({ params }: Props) {
   return {
